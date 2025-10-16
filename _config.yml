@@ -20,7 +20,9 @@ description: >- # dont remove this line. this will ignore all new lines until th
 
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
-profile_image: /assets/images/profile-image/Ahmed_avatar.jpg
+profile_image: /assets/images/profile-image/Ahmed_vantine_hi_res.jpg 
+
+      # /assets/images/profile-image/Ahmed_avatar.jpg 
 
 
 # Link your resume
@@ -99,7 +101,7 @@ colors: # this is the basic theme
   border: "#e0f2ef"
   link: "#40b3a2"
   highlight: "#2a9d8f"
-  background: "#57fbff"
+  background: "#f7fbff"
   light_background: "#f0f9f7"
 
 # A few examples. 
