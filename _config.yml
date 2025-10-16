@@ -99,7 +99,7 @@ colors: # this is the basic theme
   border: "#e0f2ef"
   link: "#40b3a2"
   highlight: "#2a9d8f"
-  background: "#f7fbfa"
+  background: "#57fbff"
   light_background: "#f0f9f7"
 
 # A few examples. 
