@@ -1,7 +1,7 @@
 ---
 layout: post  
 title: PID Motor Velocity Controller  
-description: A comprehensive guide on designing a PID controller for precise motor velocity control, leveraging real-time feedback and tuning for optimal performance.  
+description: A hands-on project aimed at designing and implementing a PID motor velocity controller for precise motor speed regulation using real-time feedback.  
 skills:  
   - Control Algorithms  
   - Motor Control  
@@ -13,52 +13,85 @@ skills:
 main-image: /images/pid_motor_velocity.jpg  
 ---
 
-# PID Motor Velocity Controller  
+# PID Motor Velocity Controller: A Practical Approach to Precision Speed Control  
 
-## Introduction  
-This project focuses on designing a closed-loop feedback system for controlling motor velocity using a PID controller. The aim is to develop a controller capable of maintaining an accurate motor speed, adjusting dynamically based on real-time feedback from an encoder. By the end of the project, the controller should be able to precisely regulate the motor’s output shaft velocity, making it adaptable to applications such as robotics and automation.
+## Project Overview  
+The challenge of this project was to design and implement a system capable of controlling the velocity of a motor in real-time, using a PID controller. Precision control of motor speed is a critical requirement in various applications like robotics and automation, where fine adjustments are necessary for optimal performance. The goal was to develop a robust system that could adjust motor speed dynamically based on feedback from an encoder, ensuring the motor's velocity matched a specified setpoint.
 
-## Implication  
-PID controllers are widely used in various industries where precise control over system parameters like speed, temperature, or position is required. In this case, the PID motor controller allows for accurate velocity control in motors, which is essential in applications ranging from robotic arms to conveyor belts and drones.
+## Problem Description  
+Many applications, including robotic arms, drones, and automated machines, rely on motors that need to operate at consistent speeds. A common challenge is maintaining a stable motor velocity despite external disturbances or varying load conditions. A simple open-loop control system, such as direct PWM control, might not suffice, as it does not adjust for errors in motor speed or external forces. To solve this, we implemented a closed-loop feedback control system using a **PID controller**.
 
-## Setup & Design  
-### Hardware  
+The system would need to:
+- Measure the motor's velocity in real-time using an encoder.
+- Compare the measured velocity with the desired setpoint.
+- Adjust the motor speed dynamically by adjusting the PWM duty cycle, based on feedback.
 
-The system consists of a TS-25GA 370H-45 motor, featuring a 45:1 gear ratio, and a TSINY-8370 Hall-effect encoder with 12 pulses per rotation (PPR). The encoder provides feedback on the motor shaft's position and direction, enabling real-time velocity calculations.
+## What I Did  
+I designed and implemented a closed-loop motor velocity controller using a PID algorithm. The system comprised the following components:
 
-- **Motor**: TS-25GA 370H-45 (45:1 gear ratio)
-- **Encoder**: TSINY-8370 (12 PPR)
+### Hardware Components  
+- **TS-25GA 370H-45 Motor**: This motor features a 45:1 gear ratio, providing mechanical advantage and precise speed control.
+- **TSINY-8370 Encoder**: A Hall-effect encoder that outputs 12 pulses per revolution (PPR), providing position feedback for velocity calculation.
+- **L293D H-Bridge Motor Driver**: Used to control the motor's speed and direction via PWM.
+- **Arduino**: The microcontroller used to implement the PID control algorithm, read encoder data, and adjust the motor speed.
 
-The encoder produces 24 pulses per revolution (PPR) due to the dual-channel setup, meaning that each complete rotation of the output shaft generates 24 pulses. This allows for precise monitoring of motor position and velocity.
+The encoder produces pulses that represent angular displacement. By counting these pulses and measuring the time between them, the motor's velocity can be calculated in degrees per second. This velocity is fed into the PID controller to adjust the PWM signal sent to the motor, maintaining a steady speed.
 
-### Wiring & Connections  
+### Programming the PID Controller  
+The core of the system lies in the PID control algorithm, which adjusts the motor speed based on the error between the desired and actual velocity. The algorithm calculates three terms:
 
-- The motor has 6 wires—two for the motor itself and three for the encoder.
-- The motor wires connect to an L293D H-Bridge motor driver, while the encoder’s channels connect to digital pins 2 and 3 on the microcontroller.
-- An external power source provides 12V for the motor and 5V for the encoder.
+1. **Proportional (P)**: Reacts to the current error.
+2. **Integral (I)**: Accounts for accumulated past errors.
+3. **Derivative (D)**: Predicts future error based on the rate of change.
 
-### Controller Setup  
-The microcontroller, in this case, an Arduino, manages the PWM signal sent to the motor driver. The PWM duty cycle adjusts the motor speed, while the encoder provides feedback for velocity measurement. The main challenge is calculating the velocity and using the PID algorithm to adjust the motor speed accordingly.
+Using an Arduino, I implemented the PID controller, where the proportional, integral, and derivative constants (`kp`, `ki`, `kd`) were adjusted to optimize motor speed control.
 
-## What is a PID Controller?  
-A **PID** (Proportional-Integral-Derivative) controller is a feedback loop mechanism designed to maintain a desired output by adjusting the input based on three error components:
-
-- **Proportional (P)**: Adjusts the output in proportion to the current error.
-- **Integral (I)**: Accounts for past errors, helping to eliminate steady-state error.
-- **Derivative (D)**: Predicts future error based on its rate of change.
-
-In this project, the PID controller continuously adjusts the motor speed by modifying the PWM signal based on the error between the desired and actual velocity, ensuring stable and accurate motor control.
-
-## Programming the Controller  
-
-The controller is programmed using Arduino, with the main logic centered around reading encoder data, calculating velocity, and applying the PID algorithm to adjust the motor's speed.
-
-### PID Control Function  
-The core of the PID control is the `computePID` function:
+#### Key Functions Implemented  
+- **`computePID` Function**: Calculates the control output based on the PID algorithm.
+- **`AngularVelocity` Function**: Computes the motor's velocity by measuring time intervals between encoder pulses.
+- **Main Loop**: Reads encoder data, computes the error, and updates the motor's speed using the PID controller.
 
 ```cpp
+// PID Motor Velocity Controller Arduino Code
+
+#define enable 11
+#define in1 10
+#define in2 9
+
+double TargetSpeed = 500;  // Target speed (degrees per second)
+double kp = 0.005, ki = 0.0005, kd = 0.00;  // PID constants
+long previousTime = 0;
+long currentTime;
+double elapsedTime;
+double error, lastError = 0, cumError = 0, rateError;
+double Setpoint, Input, Output;
+volatile long counter = 0;  // Encoder pulse counter
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(enable, OUTPUT);
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  pinMode(2, INPUT_PULLUP);  // Encoder channel A
+  pinMode(3, INPUT_PULLUP);  // Encoder channel B
+  attachInterrupt(0, ai0, RISING);  // Interrupt for encoder pulse on channel A
+  attachInterrupt(1, ai1, RISING);  // Interrupt for encoder pulse on channel B
+}
+
+void loop() {
+  Setpoint = TargetSpeed;  // Desired motor speed
+  long pos = counter / 3;  // Calculate motor position
+  Input = AngularVelocity(pos);  // Calculate current motor speed
+  
+  if (isnan(Input) == 0) {
+    Output = computePID(Input);  // Apply PID control
+  }
+  motor_speed(Output);  // Set motor speed based on PID output
+}
+
+// Function to compute PID output
 double computePID(double Input) {  
-  currentTime = millis();  // Time in milliseconds
+  currentTime = millis();
   elapsedTime = (double)(currentTime - previousTime);
   
   error = Setpoint - Input;  
@@ -72,3 +105,25 @@ double computePID(double Input) {
   
   return constrain(map(output, 0, 200, 0, 255), 0, 255);
 }
+
+// Function to calculate angular velocity from encoder pulses
+double AngularVelocity(long pos) {
+  return pos / 3.0;  // Motor speed in degrees per second
+}
+
+// Function to control motor speed via PWM
+void motor_speed(double speed) {
+  analogWrite(enable, speed);  // Adjust motor speed based on PID output
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+}
+
+// Interrupt service routines for encoder pulses
+void ai0() {
+  counter++;
+}
+
+void ai1() {
+  counter--;
+}
+```
