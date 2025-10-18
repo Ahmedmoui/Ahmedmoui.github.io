@@ -48,7 +48,7 @@ external-links:    # input only your own url slug. The icons with missing entrie
 
 # Skills Section - Add the list of your Skills by categories/tools. The indentation for each level needs to be precise. 
 skills:
-  - category: 3D Modeling
+  - category: CAD Software
     tools:
     - Onshape
     - Solidworks
@@ -59,12 +59,15 @@ skills:
     - Inventor (Autodesk)
     # - CATIA (Dassault Systèmes)
 
-  - category: Programing
+  - category: Programing and Software Tools
     tools:
-    - Git
+    - GitHub
     - Python
     - C++
-    - Ros2
+    - Robot Operating System ROS2
+    - Arduino
+    - Matlab
+    - Simulink
 
   - category: Prototyping
     tools:
