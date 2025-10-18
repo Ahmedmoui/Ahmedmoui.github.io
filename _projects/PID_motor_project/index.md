@@ -10,7 +10,7 @@ skills:
   - Feedback Systems  
   - Systems Integration  
 
-main-image: /images/pid_motor_velocity.jpg  
+main-image: /PID motor controler diagram.png 
 ---
 
 # PID Motor Velocity Controller: A Practical Approach to Precision Speed Control  
