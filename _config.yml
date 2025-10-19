@@ -27,7 +27,7 @@ profile_image: /assets/images/profile-image/Ahmed_avatar.jpg
 
 # Link your resume
 # You can place your resume in assets/resume/{resume.pdf or add external link such as pdf saved in google drive 
-resume-url: ./assets/resume/Oct 15 2025 CV Ahmed Moussaoui.pdf
+resume-url: /assets/resume/Oct 15 2025 CV Ahmed Moussaoui.pdf
 #https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing # or /assets/resume/resume.pdf
 
 
