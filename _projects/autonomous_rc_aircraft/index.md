@@ -57,21 +57,21 @@ Achieved the team's **first successful autonomous test flight**, validating the 
 
 Wing frame fabrication:
 
-<video controls width="100%" style="border-radius:6px; margin-bottom:1rem;">
+<video controls width="60%" style="border-radius:6px; margin-bottom:1rem;">
   <source src="/_projects/autonomous_rc_aircraft/IMG_5198.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-First thrust test with props mounted:
+Props mounted Test:
 
-<video controls width="100%" style="border-radius:6px; margin-bottom:1rem;">
+<video controls width="60%" style="border-radius:6px; margin-bottom:1rem;">
   <source src="/_projects/autonomous_rc_aircraft/IMG_5369.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 Control surfaces bench test:
 
-<video controls width="100%" style="border-radius:6px; margin-bottom:1rem;">
+<video controls width="60%" style="border-radius:6px; margin-bottom:1rem;">
   <source src="/_projects/autonomous_rc_aircraft/20250602_105457.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
