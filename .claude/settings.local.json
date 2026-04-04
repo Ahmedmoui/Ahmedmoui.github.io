@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://api.github.com/repos/Martnat8/ROB421-Portfolio/contents/\")",
+      "Bash(curl -s \"https://api.github.com/repos/Martnat8/ROB421-Portfolio/contents/Face%20Script\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Martnat8/ROB421-Portfolio/main/Mediapipe%20Move%20SAMI/pose_interfaces/msg/Landmark.msg\")"
+    ]
+  }
+}
