@@ -31,7 +31,7 @@ I designed and implemented a closed-loop motor velocity controller using a PID a
 
 ### Wiring & Hardware Setup
 
-![PID Controller Wiring Diagram](/PID motor controler diagram.png)
+![PID Controller Wiring Diagram](/_projects/PID_motor_project/PID motor controler diagram.png)
 
 ### Hardware Components  
 - **TS-25GA 370H-45 Motor**: This motor features a 45:1 gear ratio, providing mechanical advantage and precise speed control.
