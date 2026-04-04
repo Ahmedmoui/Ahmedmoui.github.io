@@ -10,7 +10,7 @@ skills:
   - Embedded Systems
   - Systems Integration
 
-main-image: /sami_face.jpg
+main-image: /sami_face.png
 ---
 
 # Emotion Display Robot Face – SAMI
