@@ -13,7 +13,7 @@ skills:
   - Electronics
   - Breadboarding
 
-main-image: /door_img-004.jpg
+main-image: /Main.jpg
 ---
 
 # Automated Security Door System
