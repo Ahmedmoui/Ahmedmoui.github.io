@@ -23,6 +23,12 @@ main-image: /Main.jpg
 
 ---
 
+## Demo
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/iyUSMOWzPmI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:6px;"></iframe>
+
+---
+
 ## Problem
 
 As delivery robots like Starship become common on campus, the question arises: how do you design a door that only lets people through — not robots? This project set out to build a miniature automated double-door system that screens who (or what) can enter based on physical characteristics of life.
@@ -114,8 +120,3 @@ Underside — Arduino UNO, servo, linkages, metal detector circuit, and breadboa
 
 ![Underside of door system](/_projects/automated_door_system/door_img-006.jpg)
 
----
-
-## Demo
-
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/iyUSMOWzPmI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:6px;"></iframe>
