@@ -42,6 +42,9 @@ I designed and implemented a closed-loop motor velocity controller using a PID a
 The encoder produces pulses that represent angular displacement. By counting these pulses and measuring the time between them, the motor's velocity can be calculated in degrees per second. This velocity is fed into the PID controller to adjust the PWM signal sent to the motor, maintaining a steady speed.
 
 ### Programming the PID Controller  
+
+![PID Motor Control Diagram](/PID motor controler diagram.png)
+
 The core of the system lies in the PID control algorithm, which adjusts the motor speed based on the error between the desired and actual velocity. The algorithm calculates three terms:
 
 1. **Proportional (P)**: Reacts to the current error.

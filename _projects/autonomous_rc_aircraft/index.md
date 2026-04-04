@@ -58,14 +58,14 @@ Achieved the team's **first successful autonomous test flight**, validating the 
 Wing frame fabrication:
 
 <video controls width="100%" style="border-radius:6px; margin-bottom:1rem;">
-  <source src="/IMG_5198.mov" type="video/quicktime">
+  <source src="/IMG_5198.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 First thrust test with props mounted:
 
 <video controls width="100%" style="border-radius:6px; margin-bottom:1rem;">
-  <source src="/IMG_5369.mov" type="video/quicktime">
+  <source src="/IMG_5369.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
