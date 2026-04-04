@@ -19,7 +19,7 @@ main-image: /DBF ahmed frame cropped.jpeg
 
 **Competition:** AIAA Design, Build, Fly (DBF) 2024/25  
 **Sponsor:** OSGC, AIAA  
-**Report:** [DBF Final Report](/DBF FINAL REPORT.docx.pdf)
+**Report:** [DBF Final Report](/_projects/autonomous_rc_aircraft/DBF FINAL REPORT.docx.pdf)
 
 ---
 
@@ -58,20 +58,20 @@ Achieved the team's **first successful autonomous test flight**, validating the 
 Wing frame fabrication:
 
 <video controls width="100%" style="border-radius:6px; margin-bottom:1rem;">
-  <source src="/IMG_5198.mp4" type="video/mp4">
+  <source src="/_projects/autonomous_rc_aircraft/IMG_5198.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 First thrust test with props mounted:
 
 <video controls width="100%" style="border-radius:6px; margin-bottom:1rem;">
-  <source src="/IMG_5369.mp4" type="video/mp4">
+  <source src="/_projects/autonomous_rc_aircraft/IMG_5369.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 Control surfaces bench test:
 
 <video controls width="100%" style="border-radius:6px; margin-bottom:1rem;">
-  <source src="/20250602_105457.mp4" type="video/mp4">
+  <source src="/_projects/autonomous_rc_aircraft/20250602_105457.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

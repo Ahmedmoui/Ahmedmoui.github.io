@@ -53,7 +53,7 @@ This meant the face could be updated independently by any node: the motion mirro
 
 ## Meet the Team
 
-![Meet the Team](/meet the team.png)
+![Meet the Team](/_projects/emotion_display_robot_face/meet the team.png)
 
 ## Demo
 
