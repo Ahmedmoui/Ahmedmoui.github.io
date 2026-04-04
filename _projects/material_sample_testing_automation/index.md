@@ -1,5 +1,6 @@
 ---
 layout: post
+order: 1
 title: Material Sample Testing Automation
 description: A ROS2-based automation system for a 7-DOF robotic manipulator designed to assist Civil Engineering lab technicians with repetitive material sample testing tasks.
 skills:

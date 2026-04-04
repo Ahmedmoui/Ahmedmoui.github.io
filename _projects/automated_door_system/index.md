@@ -1,5 +1,6 @@
 ---
 layout: post
+order: 4
 title: Automated Security Door System
 description: A 3D printed miniature automated double-door system with motion detection, a handmade metal detector coil, jam detection, and a full state-machine-driven control system built on Arduino.
 skills:

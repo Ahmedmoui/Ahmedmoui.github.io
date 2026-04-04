@@ -1,5 +1,6 @@
 ---
 layout: post
+order: 5
 title: Lunar Mining Rover Chassis
 description: Designed and iterated on a rover frame and motor mount system for the LBCC Space Exploration Club's lunar mining rover concept, using CAD and 3D printed prototypes.
 skills:

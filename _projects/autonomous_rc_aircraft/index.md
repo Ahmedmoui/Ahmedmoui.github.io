@@ -1,5 +1,6 @@
 ---
 layout: post
+order: 2
 title: Autonomous RC Aircraft – DBF Capstone
 description: Led the autonomous systems sub-team for Oregon State's Design Build Fly capstone, achieving the team's first successful autonomous test flight using an ArduPilot-based autopilot.
 skills:

@@ -1,5 +1,6 @@
 ---
-layout: post  
+layout: post
+order: 6  
 title: PID Motor Velocity Controller  
 description: A hands-on project aimed at designing and implementing a PID motor velocity controller for precise motor speed regulation using real-time feedback.  
 skills:  

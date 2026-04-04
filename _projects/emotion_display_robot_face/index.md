@@ -1,5 +1,6 @@
 ---
 layout: post
+order: 3
 title: Emotion Display Robot Face – SAMI
 description: Built the animated LCD face and ROS2 emotion-state interface for SAMI, a servo-actuated humanoid robot developed by the BAJAN Robotics team in ROB 421 Applied Robotics at Oregon State University.
 skills:
