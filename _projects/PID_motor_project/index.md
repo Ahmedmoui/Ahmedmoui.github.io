@@ -10,7 +10,7 @@ skills:
   - Feedback Systems  
   - Systems Integration  
 
-main-image: /PID motor controler diagram.png 
+main-image: /image.png
 ---
 
 # PID Motor Velocity Controller: A Practical Approach to Precision Speed Control  
@@ -28,6 +28,10 @@ The system would need to:
 
 ## What I Did  
 I designed and implemented a closed-loop motor velocity controller using a PID algorithm. The system comprised the following components:
+
+### Wiring & Hardware Setup
+
+![PID Controller Wiring Diagram](/PID motor controler diagram.png)
 
 ### Hardware Components  
 - **TS-25GA 370H-45 Motor**: This motor features a 45:1 gear ratio, providing mechanical advantage and precise speed control.
