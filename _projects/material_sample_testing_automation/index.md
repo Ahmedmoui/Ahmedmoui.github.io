@@ -40,11 +40,11 @@ Set up the full ROS2 + MoveIt2 software stack for the Kinova Gen3 arm from scrat
 
 Kinova Gen3 simulated in Ignition Gazebo with MoveIt2 path planning:
 
-![Kinova Gen3 in Ignition Gazebo](/_projects/material_sample_testing_automation/arm_sim_gazebo.png)
+<img src="/_projects/material_sample_testing_automation/arm_sim_gazebo.png" style="max-width:600px; width:100%; border-radius:6px;">
 
 MoveIt2 setup with the Gen3 6-DOF arm — exploring collision objects, path planners, and pose-to-pose planning:
 
-![MoveIt2 arm setup](/_projects/material_sample_testing_automation/arm_moveit_setup.png)
+<img src="/_projects/material_sample_testing_automation/arm_moveit_setup.png" style="max-width:600px; width:100%; border-radius:6px;">
 
 The lab runs the arm on a dedicated portable local network (mini router), keeping the system self-contained and easy to add cameras and sensors to as the project grows.
 
