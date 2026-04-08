@@ -76,3 +76,15 @@ Control surfaces bench test:
   <source src="/_projects/autonomous_rc_aircraft/20250602_105457.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+Marking the wing spar position during final assembly:
+
+![Ahmed marking wing spar](/_projects/autonomous_rc_aircraft/IMG_0675.jpg)
+
+The team with the completed airframe:
+
+![DBF team with completed airframe](/_projects/autonomous_rc_aircraft/IMG_4293.jpg)
+
+Team photo with our advisor after final assembly:
+
+![DBF team and advisor](/_projects/autonomous_rc_aircraft/IMG_4296.jpg)
