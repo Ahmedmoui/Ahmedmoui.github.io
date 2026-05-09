@@ -23,6 +23,10 @@ main-image: /arm_sim_gazebo.png
 
 ---
 
+<img src="/_projects/material_sample_testing_automation/arm_sim_gazebo.png" style="max-width:700px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
+
+---
+
 ## Problem
 
 Civil Engineering lab technicians spend significant time on repetitive manual tasks — loading material samples into compression and shear testing machines, waiting, then logging results. Project Autobeton uses a Kinova Gen3 robotic arm to automate this workflow, freeing up technician time and reducing variability in the testing process.
@@ -37,10 +41,6 @@ Core tasks being automated:
 ## What I Did
 
 Set up the full ROS2 + MoveIt2 software stack for the Kinova Gen3 arm from scratch — simulating the arm in Ignition Gazebo, tuning the MoveIt2 motion planner, and getting the Robotiq 2F-85 gripper working in simulation before moving to hardware.
-
-Kinova Gen3 simulated in Ignition Gazebo with MoveIt2 path planning:
-
-<img src="/_projects/material_sample_testing_automation/arm_sim_gazebo.png" style="max-width:600px; width:100%; border-radius:6px;">
 
 MoveIt2 setup with the Gen3 6-DOF arm — exploring collision objects, path planners, and pose-to-pose planning:
 

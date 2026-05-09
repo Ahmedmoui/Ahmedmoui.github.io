@@ -24,6 +24,13 @@ main-image: /DBF ahmed frame cropped.jpeg
 
 ---
 
+<video controls width="100%" style="border-radius:6px; margin-bottom:1.5rem; max-width:700px;">
+  <source src="/_projects/autonomous_rc_aircraft/IMG_5369.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
 ## Problem
 The AIAA DBF competition challenged our team to design and build a custom RC aircraft capable of captive-carry and autonomous flight — modeling the real-world X-1 supersonic aircraft experiments. Midway through the project, the team narrowly missed the competition cutoff. Rather than stopping, the scope was redefined: remove the glider, and make the mothership fully autonomous.
 

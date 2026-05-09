@@ -16,6 +16,10 @@ main-image: /image.png
 
 # PID Motor Velocity Controller: A Practical Approach to Precision Speed Control  
 
+<img src="/_projects/PID_motor_project/PID motor controler diagram.png" style="max-width:700px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
+
+---
+
 ## Project Overview  
 The challenge of this project was to design and implement a system capable of controlling the velocity of a motor in real-time, using a PID controller. Precision control of motor speed is a critical requirement in various applications like robotics and automation, where fine adjustments are necessary for optimal performance. The goal was to develop a robust system that could adjust motor speed dynamically based on feedback from an encoder, ensuring the motor's velocity matched a specified setpoint.
 
@@ -30,10 +34,6 @@ The system would need to:
 ## What I Did  
 I designed and implemented a closed-loop motor velocity controller using a PID algorithm. The system comprised the following components:
 
-### Wiring & Hardware Setup
-
-![PID Controller Wiring Diagram](/_projects/PID_motor_project/PID motor controler diagram.png)
-
 ### Hardware Components  
 - **TS-25GA 370H-45 Motor**: This motor features a 45:1 gear ratio, providing mechanical advantage and precise speed control.
 - **TSINY-8370 Encoder**: A Hall-effect encoder that outputs 12 pulses per revolution (PPR), providing position feedback for velocity calculation.
@@ -43,8 +43,6 @@ I designed and implemented a closed-loop motor velocity controller using a PID a
 The encoder produces pulses that represent angular displacement. By counting these pulses and measuring the time between them, the motor's velocity can be calculated in degrees per second. This velocity is fed into the PID controller to adjust the PWM signal sent to the motor, maintaining a steady speed.
 
 ### Programming the PID Controller  
-
-![PID Motor Control Diagram](/PID motor controler diagram.png)
 
 The core of the system lies in the PID control algorithm, which adjusts the motor speed based on the error between the desired and actual velocity. The algorithm calculates three terms:
 
