@@ -326,8 +326,6 @@ nav .mobile-nav {
     border: 1px solid rgba(0, 0, 0, 0.05);
     transition: opacity 0.5s ease, transform 0.4s ease, box-shadow 0.3s ease;
     overflow: hidden;
-    opacity: 0;
-    transform: translateY(24px);
 }
 
 .project-card img {
@@ -432,8 +430,6 @@ nav .mobile-nav {
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
                 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    opacity: 0;
-    transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
@@ -460,8 +456,6 @@ nav .mobile-nav {
     color: var(--link-color);
     border-radius: 10px;
     font-size: 17px;
-    opacity: 0;
-    transform: scale(0.85);
     transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
@@ -473,8 +467,6 @@ nav .mobile-nav {
     margin: 0 auto;
     border-radius: 20px;
     margin-bottom: 100px;
-    opacity: 0;
-    transform: translateY(20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -1052,8 +1044,32 @@ nav.scrolled {
     100% { background-position: 0%; }
 }
 
-/* Project card scroll reveal */
-.project-card.visible {
+/* ── Scroll reveal ──
+   The hidden states below are scoped to html.reveal-enabled, a class
+   added by an inline script in <head> only when JS is running. If JS is
+   disabled or fails to load, the class is never added, the hidden rules
+   never match, and all content renders normally. This prevents the
+   reveal mechanism from ever permanently hiding content. */
+
+.reveal-enabled .project-grid-section .grid-container .project-link .project-card {
+    opacity: 0;
+    transform: translateY(24px);
+}
+.reveal-enabled .skills-section .skill-categories .skills-card {
+    opacity: 0;
+    transform: translateY(20px);
+}
+.reveal-enabled .skills-section .skill-categories .skill {
+    opacity: 0;
+    transform: scale(0.85);
+}
+.reveal-enabled .contact-section {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Project card revealed */
+.reveal-enabled .project-grid-section .grid-container .project-link .project-card.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -1067,14 +1083,14 @@ nav.scrolled {
     transform: scale(1.05);
 }
 
-/* Skills card scroll reveal */
-.skills-section .skill-categories .skills-card.visible {
+/* Skills card revealed */
+.reveal-enabled .skills-section .skill-categories .skills-card.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* Staggered skill tag entrance */
-.skills-section .skill-categories .skills-card.visible .skill {
+.reveal-enabled .skills-section .skill-categories .skills-card.visible .skill {
     opacity: 1;
     transform: scale(1);
 }
@@ -1087,8 +1103,8 @@ nav.scrolled {
 .skills-section .skill-categories .skills-card.visible .skill:nth-child(6) { transition-delay: 0.24s; }
 .skills-section .skill-categories .skills-card.visible .skill:nth-child(n+7) { transition-delay: 0.28s; }
 
-/* Contact section scroll reveal */
-.contact-section.visible {
+/* Contact section revealed */
+.reveal-enabled .contact-section.visible {
     opacity: 1;
     transform: translateY(0);
 }

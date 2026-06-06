@@ -22,16 +22,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Scroll-triggered reveal for cards and sections
-    const revealObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0, rootMargin: '0px 0px -30px 0px' });
+    const revealTargets = document.querySelectorAll('.project-card, .skills-card, .contact-section');
 
-    document.querySelectorAll('.project-card, .skills-card, .contact-section').forEach(function(el) {
-        revealObserver.observe(el);
-    });
+    // Fallback: if IntersectionObserver isn't supported, reveal everything
+    // immediately so nothing stays hidden.
+    if (!('IntersectionObserver' in window)) {
+        revealTargets.forEach(function(el) { el.classList.add('visible'); });
+    } else {
+        const revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0, rootMargin: '0px 0px -30px 0px' });
+
+        revealTargets.forEach(function(el) { revealObserver.observe(el); });
+    }
 });
