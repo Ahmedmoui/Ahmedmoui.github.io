@@ -8,6 +8,7 @@
 # Main Page Setup
 
 title: Ahmed Moussaoui's Portfolio # This is what shows up in the tab of the browser
+url: "https://ahmedmoui.github.io" # Used for absolute URLs in OG tags
 
 
 # Hero Section

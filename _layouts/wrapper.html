@@ -21,8 +21,21 @@
     <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
 
     
-    <title>{{ site.title }}</title>
-    
+    <title>{% if page.title %}{{ page.title }} — {{ site.name }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <!-- Open Graph / social link previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} — {{ site.name }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:description" content="{{ site.description | strip_html | strip_newlines | truncate: 160 }}" />
+    <meta property="og:image" content="{{ site.url }}{{ site.profile_image }}" />
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} — {{ site.name }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="twitter:description" content="{{ site.description | strip_html | strip_newlines | truncate: 160 }}" />
+    <meta name="twitter:image" content="{{ site.url }}{{ site.profile_image }}" />
 
 </head>
 <body>
