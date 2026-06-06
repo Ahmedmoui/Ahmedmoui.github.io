@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 revealObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.12 });
+    }, { threshold: 0, rootMargin: '0px 0px -30px 0px' });
 
     document.querySelectorAll('.project-card, .skills-card, .contact-section').forEach(function(el) {
         revealObserver.observe(el);
