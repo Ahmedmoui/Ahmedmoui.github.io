@@ -27,6 +27,9 @@ body {
     background-color: var(--background-color);
     max-width: 1400px;
     margin: 0 auto;
+    background-image: radial-gradient(circle, rgba(74,118,238,0.07) 1px, transparent 1px);
+    background-size: 28px 28px;
+    background-attachment: local;
 }
 
 a {
@@ -67,7 +70,13 @@ nav {
     padding: 25px 0;
     height: 80px;
     align-items: center;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(247, 251, 250, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: box-shadow 0.3s;
 }
 
 nav .left a {
@@ -150,15 +159,11 @@ nav .mobile-nav {
 .hero-section {
     padding: 0 50px;
     margin: 50px 0;
-    display: flex;  /* This makes .hero-section a flex container */
-
-
-    border: 2px solid var(--border-color);
-    border-image: linear-gradient(
-        45deg, var(--border-color) 1%, transparent 1%, transparent 99%, var(--border-color) 99%
-        ) 
-        1;
-    
+    display: flex;
+    position: relative;
+    background: var(--background-color);
+    border-radius: 16px;
+    border: none;
 }
 
 .hero-section .group {
@@ -186,7 +191,13 @@ nav .mobile-nav {
 
 .hero-section .text h3 {
     font-size: 18px;
-    color: var(--text-color);
+    color: var(--link-color);
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 2px solid var(--link-color);
+    animation: typing 2.2s steps(43, end) 0.6s forwards,
+               blinkCursor 0.75s step-end 0.6s infinite;
 }
 
 .hero-section .text p {
@@ -231,6 +242,10 @@ nav .mobile-nav {
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
+    animation: float 4s ease-in-out infinite;
+    box-shadow: 0 0 0 5px var(--background-color),
+                0 0 0 8px var(--link-color),
+                0 0 28px 6px rgba(74,118,238,0.20);
 }
 
 /* NAVIGATION ARROW */
@@ -273,10 +288,12 @@ nav .mobile-nav {
     justify-content: center; 
    }
 
-.project-grid-section h2{
+.project-grid-section h2 {
     font-size: 34px;
     margin-bottom: 10px;
-    padding: 0 10px;
+    padding: 0 10px 8px;
+    display: inline-block;
+    position: relative;
 }
 
 .project-grid-section .grid-container {
@@ -303,22 +320,25 @@ nav .mobile-nav {
     box-sizing: border-box;
     padding: 15px;
     background: var(--background-color);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
                 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    transition: opacity 0.5s ease, transform 0.4s ease, box-shadow 0.3s ease;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(24px);
 }
 
 .project-card img {
-    width: 100%; 
-    max-width: 100%; 
+    width: 100%;
+    max-width: 100%;
     aspect-ratio: 3/1;
     object-fit: cover;
     display: block;
     border-radius: 6px;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
+    transition: transform 0.4s ease;
 }
 
 
@@ -388,6 +408,9 @@ nav .mobile-nav {
 .skills-section h2 {
     font-size: 34px;
     margin-bottom: 15px;
+    padding-bottom: 8px;
+    display: inline-block;
+    position: relative;
 }
 
 
@@ -406,10 +429,13 @@ nav .mobile-nav {
     margin-bottom: 15px;
     padding: 15px;
     border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.05);    
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-                  0 2px 4px -1px rgba(0, 0, 0, 0.06);
-   }
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
 .skills-section .skill-categories .category-label {
     font-size: 20px;
@@ -426,7 +452,7 @@ nav .mobile-nav {
     }
 
 .skills-section .skill-categories .skill {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 3px 8px;
@@ -434,6 +460,9 @@ nav .mobile-nav {
     color: var(--link-color);
     border-radius: 10px;
     font-size: 17px;
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 
@@ -441,10 +470,12 @@ nav .mobile-nav {
 .contact-section {
     padding: 25px 25px;
     max-width: 600px;
-    margin: 0 auto; 
-    border-radius: 20px; 
+    margin: 0 auto;
+    border-radius: 20px;
     margin-bottom: 100px;
-      
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .contact-section h2 {
@@ -744,8 +775,10 @@ footer p {
     .hero-section {
         padding: 0 20px;
         border: none;
-       
-        
+        border-radius: 0;
+    }
+    .hero-section::before {
+        display: none;
     }
     .hero-section .group{
         flex-direction: column-reverse;
@@ -832,10 +865,18 @@ footer p {
     
       
     /*SECTION 1: Hero */
+    .hero-section .text h3 {
+        white-space: normal;
+        overflow: visible;
+        width: auto !important;
+        animation: none;
+        border-right: none;
+    }
+
     .hero-section .group .text h2 {
         flex-direction: column-reverse;
         display: flex;
-        font-size: 40px;   
+        font-size: 40px;
       }
     
     .hero-section .group .text h2 .external-links i {
@@ -944,6 +985,111 @@ footer p {
         padding: 5px;
       }
 
-      
+
+}
+
+
+/* ═══════════════════════════════════════
+   VISUAL FLAIR
+═══════════════════════════════════════ */
+
+/* Sticky nav scroll shadow */
+nav.scrolled {
+    box-shadow: 0 2px 20px rgba(74,118,238,0.10);
+}
+
+/* Hero: animated gradient border ring */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #4a76ee, #2a9d8f, #40b3a2, #4a76ee);
+    background-size: 300% 300%;
+    animation: gradientShift 6s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Typewriter */
+@keyframes typing {
+    to { width: 100%; }
+}
+
+@keyframes blinkCursor {
+    50% { border-color: transparent; }
+}
+
+/* Headshot float */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-10px); }
+}
+
+/* Section heading gradient underlines */
+.project-grid-section h2::after,
+.skills-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 0;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--link-color), var(--highlight-color));
+    background-size: 200% 100%;
+    animation: slideGradient 3s ease infinite;
+}
+
+@keyframes slideGradient {
+    0%   { background-position: 0%; }
+    50%  { background-position: 100%; }
+    100% { background-position: 0%; }
+}
+
+/* Project card scroll reveal */
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card.visible:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(74,118,238,0.22), 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Skills card scroll reveal */
+.skills-section .skill-categories .skills-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered skill tag entrance */
+.skills-section .skill-categories .skills-card.visible .skill {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.skills-section .skill-categories .skills-card.visible .skill:nth-child(1) { transition-delay: 0.04s; }
+.skills-section .skill-categories .skills-card.visible .skill:nth-child(2) { transition-delay: 0.08s; }
+.skills-section .skill-categories .skills-card.visible .skill:nth-child(3) { transition-delay: 0.12s; }
+.skills-section .skill-categories .skills-card.visible .skill:nth-child(4) { transition-delay: 0.16s; }
+.skills-section .skill-categories .skills-card.visible .skill:nth-child(5) { transition-delay: 0.20s; }
+.skills-section .skill-categories .skills-card.visible .skill:nth-child(6) { transition-delay: 0.24s; }
+.skills-section .skill-categories .skills-card.visible .skill:nth-child(n+7) { transition-delay: 0.28s; }
+
+/* Contact section scroll reveal */
+.contact-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
