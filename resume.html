@@ -1,0 +1,23 @@
+---
+layout: wrapper
+permalink: /resume
+title: Resume
+---
+
+<section class="resume-page">
+    <div class="resume-actions">
+        <h1>Resume</h1>
+        <a class="resume-download" href="{{ '/assets/resume/resume.pdf' | relative_url }}" download>
+            <i class="fa-solid fa-download"></i>
+            <span>Download PDF</span>
+        </a>
+    </div>
+
+    <div class="resume-embed">
+        <iframe src="{{ '/assets/resume/resume.pdf' | relative_url }}" title="Ahmed Moussaoui — Resume" loading="lazy"></iframe>
+        <p class="resume-fallback">
+            Can't see the resume above?
+            <a href="{{ '/assets/resume/resume.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Open it in a new tab</a>.
+        </p>
+    </div>
+</section>

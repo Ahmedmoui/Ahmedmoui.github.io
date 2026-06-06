@@ -1,0 +1,34 @@
+{% assign r = site.data.resume %}
+<!-- SECTION: Terminal snapshot (data-driven from _data/resume.yml) -->
+<section class="terminal-section" id="snapshot">
+    {% if r.terminal.heading != blank %}
+    <h2>{{ r.terminal.heading }}</h2>
+    {% endif %}
+
+    <div class="terminal">
+        <div class="terminal__bar">
+            <span class="terminal__dot terminal__dot--r"></span>
+            <span class="terminal__dot terminal__dot--y"></span>
+            <span class="terminal__dot terminal__dot--g"></span>
+            <span class="terminal__title">{{ r.terminal.user }}@{{ r.terminal.host }}: ~</span>
+        </div>
+        <div class="terminal__body">
+            <span class="line cmd-line"><span class="prompt">{{ r.terminal.user }}@{{ r.terminal.host }}:~$</span> <span class="cmd">whoami</span></span>
+            <span class="line out">{{ r.terminal.whoami }}</span>
+
+            <span class="line cmd-line"><span class="prompt">{{ r.terminal.user }}@{{ r.terminal.host }}:~$</span> <span class="cmd">cat skills.txt</span></span>
+            {% for s in r.terminal.skills %}
+            <span class="line out skill-row"><span class="key">{{ s.label }}</span><span class="dots"></span><span class="vals">{{ s.items }}</span></span>
+            {% endfor %}
+
+            <span class="line cmd-line"><span class="prompt">{{ r.terminal.user }}@{{ r.terminal.host }}:~$</span> <span class="cmd">status --availability</span></span>
+            {% if r.status.available %}
+            <span class="line status-line"><span class="status-dot"></span><span class="status-text">{{ r.status.text }}</span></span>
+            {% else %}
+            <span class="line out muted"># not currently listed</span>
+            {% endif %}
+
+            <span class="line cmd-line"><span class="prompt">{{ r.terminal.user }}@{{ r.terminal.host }}:~$</span> <span class="cursor">&nbsp;</span></span>
+        </div>
+    </div>
+</section>

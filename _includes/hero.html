@@ -85,7 +85,14 @@
                     <span>Contact Me</span>
                 </a>
             </div>
-            
+
+            {% if site.data.resume.status.available %}
+            <div class="status-pill">
+                <span class="status-dot"></span>
+                <span>{{ site.data.resume.status.text }}</span>
+            </div>
+            {% endif %}
+
         </div>
         <div class="headshot">
             <img src= {{site.profile_image}} alt="john doe headshot">       

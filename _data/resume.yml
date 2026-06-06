@@ -1,0 +1,34 @@
+# ───────────────────────────────────────────────────────────────
+# Single source of truth for the home-page terminal + status pill.
+# Edit these values and the site updates automatically — no HTML/CSS.
+# ───────────────────────────────────────────────────────────────
+
+# Availability status. Drives the pill in the hero AND the last line
+# of the terminal. Flip `available` to false to hide both at once
+# (e.g. set to false and change text to "Hired 🎉" later).
+status:
+  available: true
+  text: "Open to full-time & internship roles — June 2026"
+
+terminal:
+  # Leave heading blank ("") for no heading above the terminal.
+  # Set it to any text (e.g. "Snapshot", "whoami") to show one.
+  heading: ""
+
+  # Shown in the title bar and prompts: <user>@<host>:~$
+  user: "ahmed"
+  host: "portfolio"
+
+  # Output of the `whoami` line.
+  whoami: "Mechanical Engineer · Robotics & Controls · Oregon State '26"
+
+  # Output of `cat skills.txt` — add/remove/reorder freely.
+  skills:
+    - label: "CAD"
+      items: "SolidWorks, Fusion 360, Inventor, GD&T"
+    - label: "Robotics"
+      items: "ROS2, MoveIt2, ArduPilot, Motion Planning"
+    - label: "Programming"
+      items: "Python, C++, MATLAB, OpenCV, YOLO, Docker"
+    - label: "Fabrication"
+      items: "3D Printing, Machining, Wiring, Soldering"

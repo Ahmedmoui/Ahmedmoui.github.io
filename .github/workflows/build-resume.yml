@@ -1,0 +1,35 @@
+name: Build resume PDF
+
+# Compiles assets/resume/resume.tex into resume.pdf and commits the result.
+# Runs only when the .tex (or this workflow) changes, so the bot's PDF
+# commit never re-triggers the workflow (no infinite loop).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "assets/resume/resume.tex"
+      - ".github/workflows/build-resume.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile resume.tex
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: assets/resume
+          root_file: resume.tex
+
+      - name: Commit compiled PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Build resume.pdf from resume.tex [skip ci]"
+          file_pattern: "assets/resume/resume.pdf"

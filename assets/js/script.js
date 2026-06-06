@@ -40,4 +40,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
         revealTargets.forEach(function(el) { revealObserver.observe(el); });
     }
+
+    // Terminal: type out lines sequentially when scrolled into view.
+    const terminal = document.querySelector('.terminal');
+    if (terminal) {
+        const lines = terminal.querySelectorAll('.terminal__body .line');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const showAll = function() {
+            lines.forEach(function(l) { l.classList.add('shown'); });
+        };
+
+        const typeLines = function() {
+            let i = 0;
+            (function tick() {
+                if (i >= lines.length) return;
+                lines[i].classList.add('shown');
+                i++;
+                setTimeout(tick, 260);
+            })();
+        };
+
+        if (reduceMotion || !('IntersectionObserver' in window)) {
+            showAll();
+        } else {
+            const termObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        typeLines();
+                        termObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.25 });
+            termObserver.observe(terminal);
+        }
+    }
 });
