@@ -1,5 +1,5 @@
 %-------------------------
-% Resume in Latex
+% Resume in LaTeX
 % Adapted from Jake Gutierrez template
 %------------------------
 
@@ -16,6 +16,8 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage{XCharter} % Clean, professional serif; sharp on screen and in print
 \input{glyphtounicode}
 
 \pagestyle{fancy}
@@ -39,6 +41,7 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
+% Ensures ATS / copy-paste extracts clean text from the PDF.
 \pdfgentounicode=1
 
 \newcommand{\resumeItem}[1]{
@@ -46,7 +49,7 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{3pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
@@ -54,7 +57,7 @@
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
+    \vspace{3pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
@@ -72,13 +75,22 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Ahmed Moussaoui} \\ \vspace{1pt}
-    \small 541-908-6657 $|$
-    \href{mailto:ahmedamoussaoui@gmail.com}{\underline{ahmedamoussaoui@gmail.com}} $|$
-    \href{https://ahmedmoui.github.io}{\underline{ahmedmoui.github.io}} $|$
-    Corvallis, OR (Open to Relocation) \\
-    \href{https://linkedin.com/in/ahmed-latif-moussaoui}{\underline{linkedin.com/in/ahmed-latif-moussaoui}}
+    \textbf{\Huge \scshape Ahmed Moussaoui}
 \end{center}
+\vspace{1pt}
+{\small
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  541-908-6657 & \href{https://ahmedmoui.github.io}{\underline{ahmedmoui.github.io}} $|$ \href{https://linkedin.com/in/ahmed-latif-moussaoui}{\underline{linkedin.com/in/ahmed-latif-moussaoui}} \\
+  \href{mailto:ahmedamoussaoui@gmail.com}{\underline{ahmedamoussaoui@gmail.com}} & Corvallis, OR (Open to Relocation) \\
+\end{tabular*}
+}
+\vspace{-8pt}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\vspace{-2pt}
+\small{Mechanical engineering student at Oregon State University (Robotics Control Option) with hands-on experience building vision-guided manipulation systems, autonomous aircraft, and embedded control software, across the full stack from CAD and fabrication to ROS2 and controls. Seeking a robotics, automation, or mechanical design role where I can own projects end to end.}
+\vspace{-4pt}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -88,6 +100,19 @@
       {B.S. in Mechanical Engineering, Robotics Control Option}{Expected June 2026}
   \resumeSubHeadingListEnd
 
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{CAD and Design}{: SolidWorks, Fusion 360, Autodesk Inventor, GD\&T, DFM, Part and Assembly Design} \\
+     \textbf{Fabrication}{: 3D Printing (FDM), Rapid Prototyping, CNC Machining, Soldering, Wiring and Electrical Assembly, Machine Shop} \\
+     \textbf{Robotics}{: ROS2, MoveIt2, ArduPilot, Mission Planner, Motion Planning, Systems Integration, Embedded Systems} \\
+     \textbf{Programming}{: Python, C++, MATLAB, Arduino, OpenCV, YOLO, Docker, Linux, GitHub} \\
+     \textbf{AI and ML}{: AI API Integration, Computer Vision (OpenCV, YOLO), Pre-trained Model Deployment, Model Fine-tuning} \\
+     \textbf{Platforms}{: Linux, Raspberry Pi, Raspberry Pi OS}
+    }}
+ \end{itemize}
+
 %-----------EXPERIENCE-----------
 \section{Work Experience}
   \resumeSubHeadingListStart
@@ -96,25 +121,18 @@
       {Robotics Lab Engineer}{Feb. 2025 -- Present}
       {OSU College of Civil Engineering}{Corvallis, OR}
       \resumeItemListStart
-        \resumeItem{Led a 2-3 person team designing and deploying multiple automation systems for a civil engineering research lab, targeting repetitive testing processes with a 7-DOF robotic manipulator.}
-        \resumeItem{Built a vision-guided pick-and-place pipeline from scratch, reducing manual technician task time by approximately 75\% through automated object detection, grasp pose generation, and motion planning.}
-        \resumeItem{Presented system capabilities and progress to a group of potential investors on behalf of the research group.}
-        \resumeItem{Containerized the completed system using Docker for reproducible deployment across lab environments.}
+        \resumeItem{Led a 2--3 person team designing and deploying automation systems for a civil engineering research lab, automating repetitive testing with a 7-DOF robotic manipulator.}
+        \resumeItem{Built a vision-guided pick-and-place pipeline from scratch, cutting manual technician task time by 75\% through automated object detection, grasp pose generation, and motion planning.}
+        \resumeItem{Presented system capabilities and progress to prospective investors on behalf of the research group.}
+        \resumeItem{Containerized the system with Docker for reproducible deployment across lab environments.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Undergraduate Learning Assistant, ME 203}{Sept. 2025 -- Present}
       {OSU MIME Department}{Corvallis, OR}
       \resumeItemListStart
-        \resumeItem{Supported 30+ students per term in Python programming for engineering data analysis, numerical methods, and visualization.}
-        \resumeItem{Led lab sessions and provided one-on-one guidance, collaborating with faculty to refine course materials.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {3D Modeler}{May 2022 -- June 2022}
-      {Freelancer, Fiverr}{Remote}
-      \resumeItemListStart
-        \resumeItem{Produced manufacturing-ready CAD models for multiple clients across 3D printing, injection molding, and CNC machining. Maintained a 5-star rating across all orders.}
+        \resumeItem{Taught Python for engineering data analysis, numerical methods, and visualization to 25+ students per term.}
+        \resumeItem{Led lab sessions and one-on-one guidance, partnering with faculty to refine course materials.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -126,38 +144,25 @@
       \resumeProjectHeading
           {\textbf{Autonomous RC Aircraft} $|$ \emph{ArduPilot, Mission Planner, Avionics, Fabrication}}{Sept. 2024 -- June 2025}
           \resumeItemListStart
-            \resumeItem{Autonomous sub-team lead on a 6-10 person DBF capstone team. Built the aircraft from scratch including frame, full wiring harness, and avionics integration.}
-            \resumeItem{Achieved multiple successful autonomous test flights across several test days, the first in the team's history.}
+            \resumeItem{Led the autonomous sub-team on a 6--10 person DBF capstone, building the aircraft from scratch including frame, wiring harness, and avionics integration.}
+            \resumeItem{Achieved the first successful autonomous test flights in the team's history, across multiple test days.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{SAMI Humanoid Robot -- Face Display and Head Design} $|$ \emph{ROS2, Pygame, Fusion 360, Raspberry Pi}}{Spring 2025}
+          {\textbf{SAMI Humanoid Robot} $|$ \emph{ROS2, Pygame, Fusion 360, Raspberry Pi}}{Spring 2025}
           \resumeItemListStart
-            \resumeItem{One of 3-5 person team. Designed and fabricated the full robot head enclosure and screen mount in Fusion 360. Built an animated face display with real-time ROS2 emotion state control.}
-            \resumeItem{Delivered a successful live demo with continuous reliable operation in front of an audience.}
+            \resumeItem{Designed and fabricated the full robot head enclosure and screen mount in Fusion 360 on a 3--5 person team, and built an animated face display with real-time ROS2 emotion-state control.}
+            \resumeItem{Delivered a live audience demo of three modes --- pose mirroring, dancing, and emotional display --- with continuous reliable operation.}
           \resumeItemListEnd
 
       \resumeProjectHeading
           {\textbf{Automated Security Door System} $|$ \emph{C++, Arduino, Fusion 360, 3D Printing}}{OSU ME 351}
           \resumeItemListStart
-            \resumeItem{Designed and 3D printed the full mechanical enclosure, integrating servo actuation, linkages, and sensors.}
-            \resumeItem{Built a custom metal detector circuit from scratch and wrote a 5-state C++ control system with jam detection, forced entry detection, and manual override.}
+            \resumeItem{Designed and 3D printed the full mechanical enclosure, integrating servo actuation, linkages, and sensors to halve part count and improve manufacturability.}
+            \resumeItem{Built a custom metal-detector circuit from scratch and wrote a 5-state C++ control system with jam detection, forced-entry detection, and manual override.}
           \resumeItemListEnd
 
     \resumeSubHeadingListEnd
-
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{CAD and Design}{: SolidWorks, Fusion 360, Autodesk Inventor, GD\&T, DFM, Part and Assembly Design} \\
-     \textbf{Fabrication}{: 3D Printing (FDM), Rapid Prototyping, Machining, Soldering, Wiring and Electrical Assembly, Machine Shop} \\
-     \textbf{Robotics}{: ROS2, MoveIt2, ArduPilot, Mission Planner, Motion Planning, Systems Integration, Embedded Systems} \\
-     \textbf{Programming}{: Python, C++, MATLAB, Arduino, OpenCV, YOLO, Docker, Linux, GitHub} \\
-     \textbf{AI and ML}{: AI API Integration, Computer Vision (OpenCV, YOLO), Pre-trained Model Deployment, Model Fine-tuning} \\
-     \textbf{Platforms}{: Linux, Raspberry Pi, Raspberry Pi OS}
-    }}
- \end{itemize}
 
 %-----------LEADERSHIP-----------
 \section{Leadership}
@@ -167,14 +172,14 @@
       {Head Coach, Esports Club}{Sept. 2024 -- Apr. 2025}
       {Oregon State University}{Corvallis, OR}
       \resumeItemListStart
-        \resumeItem{Led and managed approximately 20 players across two competitive Valorant teams, improving on-field coordination by 50\% through targeted communication and teamwork drills.}
+        \resumeItem{Coached and managed around 20 players across two competitive Valorant teams, improving in-game coordination through structured communication and teamwork drills.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Vice President, LEGO Club}{Nov. 2024 -- Apr. 2025}
       {Oregon State University}{Corvallis, OR}
       \resumeItemListStart
-        \resumeItem{Co-founded the club with faculty support, grew membership to 20+ students in the first term through weekly build meetings and hands-on engineering activities.}
+        \resumeItem{Co-founded the club with faculty support and grew membership to 20+ students in one term through weekly build meetings and hands-on engineering activities.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
