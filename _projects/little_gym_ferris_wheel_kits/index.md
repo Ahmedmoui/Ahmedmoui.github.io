@@ -37,6 +37,11 @@ That math turned into a parts catalog: a 2x center joint, a 6x side joint, and a
 
 <img src="/_projects/little_gym_ferris_wheel_kits/sketch_joint_catalog.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
 
+This was the first prototype — a wheel built from green straws and paper before committing to the full production run, which made it easy to spot fit issues against the light:
+
+<img src="/_projects/little_gym_ferris_wheel_kits/green_wheel_closeup.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
+<img src="/_projects/little_gym_ferris_wheel_kits/green_wheel_backlit.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
+
 ## Modeling and Printing
 
 I modeled the joint family parametrically in **Fusion 360** so the stick-pocket width, wall thickness, and hub angle were all driven off a few variables — useful once I started iterating on fit (the first pass was too tight for a 6-year-old's hands to assemble without snapping a stick).
@@ -58,11 +63,6 @@ Before locking in dimensions, I mocked up wheels at the kitchen table with loose
 <img src="/_projects/little_gym_ferris_wheel_kits/hub_unassembled.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
 <img src="/_projects/little_gym_ferris_wheel_kits/stick_hexagon_experiment.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
 <img src="/_projects/little_gym_ferris_wheel_kits/wheel_with_sticks.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
-
-I also ran a batch in green filament, which made it easy to spot fit issues against the light:
-
-<img src="/_projects/little_gym_ferris_wheel_kits/green_wheel_closeup.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
-<img src="/_projects/little_gym_ferris_wheel_kits/green_wheel_backlit.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
 
 ## The Finished Kits
 
