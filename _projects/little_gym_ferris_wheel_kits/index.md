@@ -59,7 +59,7 @@ Before locking in dimensions, I mocked up wheels at the kitchen table with loose
 <img src="/_projects/little_gym_ferris_wheel_kits/stick_hexagon_experiment.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
 <img src="/_projects/little_gym_ferris_wheel_kits/wheel_with_sticks.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
 
-I also ran a batch in a glow-in-the-dark filament, which doubled as an easy way to spot fit issues against the light:
+I also ran a batch in green filament, which made it easy to spot fit issues against the light:
 
 <img src="/_projects/little_gym_ferris_wheel_kits/green_wheel_closeup.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
 <img src="/_projects/little_gym_ferris_wheel_kits/green_wheel_backlit.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
