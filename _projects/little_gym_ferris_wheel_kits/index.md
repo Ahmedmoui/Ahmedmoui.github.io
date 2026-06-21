@@ -2,7 +2,7 @@
 layout: post
 order: 5
 title: Popsicle-Stick Ferris Wheel Build Kits
-description: Designed and 3D printed a 35-kit batch of snap-together joints that let kids build their own working popsicle-stick Ferris wheel, commissioned for The Little Gym of Corvallis.
+description: Designed and 3D printed a 35-kit batch of snap-together joints that let kids build their own working popsicle-stick Ferris wheel, commissioned by a local child development center.
 skills:
   - Fusion 360
   - Parametric Modeling
@@ -16,14 +16,14 @@ main-image: /gym_display_wheels_crop.jpg
 
 # Popsicle-Stick Ferris Wheel Build Kits
 
-**Client:** The Little Gym of Corvallis
+**Client:** A local child development center
 **Deliverable:** 35 build-your-own-Ferris-wheel kits for a kids' craft activity
 
 ---
 
 ## The Brief
 
-The Little Gym of Corvallis wanted a hands-on activity kids could build themselves: a Ferris wheel made from ordinary popsicle sticks. My job was to design the hardware that makes that possible — a set of 3D printed joints that snap onto sticks and hold them at the exact angles needed to form a hexagonal wheel, repeated across 35 kits.
+A local child development center wanted a hands-on craft activity kids could build themselves: a Ferris wheel made from ordinary popsicle sticks, easy enough for small hands to assemble on their own. Their first prototype was straws and pieces of paper held together with glue — functional as a one-off, but too fragile and fiddly to hand to 35 different kids. I proposed a 3D printed alternative instead: a set of joints that snap onto sticks and hold them at the exact angles needed to form a hexagonal wheel, repeated across 35 kits.
 
 <video src="/_projects/little_gym_ferris_wheel_kits/assembly_clip.mp4" autoplay loop muted playsinline style="max-width:420px; width:100%; border-radius:6px; margin-bottom:1.5rem;"></video>
 
@@ -70,7 +70,7 @@ I also ran a batch in a glow-in-the-dark filament, which doubled as an easy way 
 <img src="/_projects/little_gym_ferris_wheel_kits/product_shot_a.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
 <img src="/_projects/little_gym_ferris_wheel_kits/product_shot_b.jpg" style="max-width:550px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
 
-35 kits shipped out and went up on display at The Little Gym of Corvallis ([instagram.com/p/Chc7rc_sqf9](https://www.instagram.com/p/Chc7rc_sqf9/)):
+35 kits shipped out and went up on display at the center:
 
 <img src="/_projects/little_gym_ferris_wheel_kits/gym_display.jpg" style="max-width:700px; width:100%; border-radius:6px; margin-bottom:1.5rem;">
 
