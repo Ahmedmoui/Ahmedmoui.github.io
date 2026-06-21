@@ -1,7 +1,7 @@
 ---
 layout: post
 order: 5
-title: Popsicle-Stick Ferris Wheel Kits — The Little Gym
+title: Popsicle-Stick Ferris Wheel Build Kits
 description: Designed and 3D printed a 35-kit batch of snap-together joints that let kids build their own working popsicle-stick Ferris wheel, commissioned for The Little Gym of Corvallis.
 skills:
   - Fusion 360
@@ -11,10 +11,10 @@ skills:
   - Design for Manufacturing
   - Trigonometry / Geometric Design
   - Batch Production
-main-image: /gym_display.jpg
+main-image: /gym_display_wheels_crop.jpg
 ---
 
-# Popsicle-Stick Ferris Wheel Kits
+# Popsicle-Stick Ferris Wheel Build Kits
 
 **Client:** The Little Gym of Corvallis
 **Deliverable:** 35 build-your-own-Ferris-wheel kits for a kids' craft activity
