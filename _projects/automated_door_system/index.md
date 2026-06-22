@@ -43,7 +43,7 @@ The system needed to:
 ## What I Did
 
 ### 3D Printing & Assembly
-Modified the baseline Fusion 360 CAD to improve assembly practicality, then printed the full door structure on my Creality Surmoon D1 (~750g of filament). Spent ~4 hours on CAD modifications and another ~4 hours wiring and assembling the test article — integrating the Arduino, breadboard, servo, and all sensors into the enclosure.
+Modified the baseline Fusion 360 CAD to improve assembly practicality, then printed the full door structure on my Creality Sermoon D1 (~750g of filament). Spent ~4 hours on CAD modifications and another ~4 hours wiring and assembling the test article — integrating the Arduino, breadboard, servo, and all sensors into the enclosure.
 
 ### Handmade Metal Detector
 Designed and built the metal detection circuit from scratch using materials I had on hand. The detector works by:
