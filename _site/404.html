@@ -7,18 +7,35 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/syntax.css">
 
-    <script src="/assets/js/script.js"></script>
+    <!-- Enables scroll-reveal hidden states only when JS runs, so content
+         is never permanently hidden if JS is disabled or fails to load. -->
+    <script>document.documentElement.classList.add('reveal-enabled');</script>
+
+    <script src="/assets/js/script.js" defer></script>
 
     
-    <title>John Doe's Portfolio</title>
-    
+    <title>Ahmed Moussaoui's Portfolio</title>
+
+    <!-- Open Graph / social link previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost:4002/404.html" />
+    <meta property="og:site_name" content="Ahmed Moussaoui" />
+    <meta property="og:title" content="Ahmed Moussaoui's Portfolio" />
+    <meta property="og:description" content="I'm a mechanical engineering grad from Oregon State who builds robots and the software that runs them. I'm drawn to problems that are supposed to be hard, wh..." />
+    <meta property="og:image" content="http://localhost:4002/assets/images/profile-image/Ahmed_avatar.jpg" />
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Ahmed Moussaoui's Portfolio" />
+    <meta name="twitter:description" content="I'm a mechanical engineering grad from Oregon State who builds robots and the software that runs them. I'm drawn to problems that are supposed to be hard, wh..." />
+    <meta name="twitter:image" content="http://localhost:4002/assets/images/profile-image/Ahmed_avatar.jpg" />
 
 </head>
 <body>
@@ -26,7 +43,7 @@
      <!-- _includes/nav.html -->
 <nav>
     <div class="left">
-        <a href="/">John Doe</a>
+        <a href="/">Ahmed Moussaoui</a>
     </div>
 
     <!-- Desktop Menu -->
@@ -37,7 +54,7 @@
         <a href="/projects/">
             <span>Projects</span>
         </a>
-        <a href="https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a href="/resume">
             <span>Resume</span>
         </a>
     </div>
@@ -55,7 +72,7 @@
         <a href="/projects/">
             <span>Projects</span>
         </a>
-        <a href="https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a href="/resume">
             <span>Resume</span>
         </a>
     </div>
@@ -102,14 +119,15 @@
             <a href="/projects/">
                 <span>Projects</span>
             </a>
-            <a href=https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing target="_blank" rel="noopener noreferrer">
+            <a href="/resume">
                 <span>Resume</span>
             </a>
         </div>
     </div>
     <div class="license">
-        <span>For any question or suggestion for the portfolio template or projects, reach out <a class="help" href="https://createdotshow.com"> Here</a> </span>
-        <p>FreeToEngineer portfolio template © 2025 by Aram Lee is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">CC BY 4.0</a></p>
+        <span>For any question or suggestion for the portfolio template or projects, reach out <a class="help" href="mailto:admin@lowinertia.com"> Here</a> </span>
+        <p>Free-To-Engineer portfolio template © 2025 by lowinertia.com is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">CC BY 4.0</a></p>
     </div>
 </footer>
+
 </html>

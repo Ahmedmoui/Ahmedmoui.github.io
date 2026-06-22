@@ -7,18 +7,35 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/syntax.css">
 
-    <script src="/assets/js/script.js"></script>
+    <!-- Enables scroll-reveal hidden states only when JS runs, so content
+         is never permanently hidden if JS is disabled or fails to load. -->
+    <script>document.documentElement.classList.add('reveal-enabled');</script>
+
+    <script src="/assets/js/script.js" defer></script>
 
     
     <title>Ahmed Moussaoui's Portfolio</title>
-    
+
+    <!-- Open Graph / social link previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost:4002/" />
+    <meta property="og:site_name" content="Ahmed Moussaoui" />
+    <meta property="og:title" content="Ahmed Moussaoui's Portfolio" />
+    <meta property="og:description" content="I'm a mechanical engineering grad from Oregon State who builds robots and the software that runs them. I'm drawn to problems that are supposed to be hard, wh..." />
+    <meta property="og:image" content="http://localhost:4002/assets/images/profile-image/Ahmed_avatar.jpg" />
+
+    <!-- Twitter / X card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Ahmed Moussaoui's Portfolio" />
+    <meta name="twitter:description" content="I'm a mechanical engineering grad from Oregon State who builds robots and the software that runs them. I'm drawn to problems that are supposed to be hard, wh..." />
+    <meta name="twitter:image" content="http://localhost:4002/assets/images/profile-image/Ahmed_avatar.jpg" />
 
 </head>
 <body>
@@ -37,7 +54,7 @@
         <a href="/projects/">
             <span>Projects</span>
         </a>
-        <a href="https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a href="/resume">
             <span>Resume</span>
         </a>
     </div>
@@ -55,7 +72,7 @@
         <a href="/projects/">
             <span>Projects</span>
         </a>
-        <a href="https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <a href="/resume">
             <span>Resume</span>
         </a>
     </div>
@@ -67,14 +84,15 @@
     <div class="group">
         <div class="text">
             <h2>
-                Ahmed "latif" Moussaoui 
+                Ahmed Latif Moussaoui
+                <!-- Ahmed  -->
                 
                 <span class="external-links">
                     
                     
                         
                             
-                            <a href="https://www.linkedin.com/in/aramlee1/" target="_blank">
+                            <a href="https://www.linkedin.com/in/ahmed-latif-moussaoui/" target="_blank">
                                 <i class="fa-brands fa-linkedin"></i>
                             </a>
                         
@@ -85,20 +103,13 @@
                     
                         
                             
-                                <a href="https://github.com/leea2/" target="_blank">
+                                <a href="https://github.com/Ahmedmoui/" target="_blank">
                                     <i class="fa-brands fa-github"></i>
                                 </a>
                             
                             
                         
                     
-                        
-                            
-                                <a href="https://stackoverflow.com/users/test/" target="_blank">
-                                    <i class="fa-brands fa-stack-overflow"></i>
-                                </a>
-                            
-                            
                         
                     
                         
@@ -117,8 +128,8 @@
                 
             </h2>
             
-            <h3> headline message </h3>
-            <p> Write an awesome intro and discuss your highlights and qualification. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+            <h3> Mechanical Engineer | Robotics & Automation </h3>
+            <p> I'm a mechanical engineering grad from Oregon State who builds robots and the software that runs them. I'm drawn to problems that are supposed to be hard, where the fun is figuring out how something works and then getting good at it. <br><br> The projects below are what I've been making.</p>
             <div class="links">
                 <a href="#projects">
                     <i class="fa-solid fa-pen"></i>
@@ -133,10 +144,17 @@
                     <span>Contact Me</span>
                 </a>
             </div>
+
             
+            <div class="status-pill">
+                <span class="status-dot"></span>
+                <span>Open to full-time & internship roles — June 2026</span>
+            </div>
+            
+
         </div>
         <div class="headshot">
-            <img src= ./assets/images/profile-image/avatar.jpeg alt="Ahmed's headshot">       
+            <img src= /assets/images/profile-image/Ahmed_avatar.jpg alt="Ahmed Moussaoui headshot">
         </div>
     </div>
     
@@ -145,8 +163,46 @@
 
 
 
+<!-- SECTION: Terminal snapshot (data-driven from _data/resume.yml) -->
+<section class="terminal-section" id="snapshot">
+    
+    <h2></h2>
+    
 
-<div class="arrow"> 
+    <div class="terminal">
+        <div class="terminal__bar">
+            <span class="terminal__dot terminal__dot--r"></span>
+            <span class="terminal__dot terminal__dot--y"></span>
+            <span class="terminal__dot terminal__dot--g"></span>
+            <span class="terminal__title">ahmed@portfolio: ~</span>
+        </div>
+        <div class="terminal__body">
+            <span class="line cmd-line"><span class="prompt">ahmed@portfolio:~$</span> <span class="cmd">whoami</span></span>
+            <span class="line out">Mechanical Engineer · Robotics & Controls · Oregon State '26</span>
+
+            <span class="line cmd-line"><span class="prompt">ahmed@portfolio:~$</span> <span class="cmd">cat skills.txt</span></span>
+            
+            <span class="line out skill-row"><span class="key">CAD</span><span class="dots"></span><span class="vals">SolidWorks, Fusion 360, Inventor, GD&T</span></span>
+            
+            <span class="line out skill-row"><span class="key">Robotics</span><span class="dots"></span><span class="vals">ROS2, MoveIt2, ArduPilot, Motion Planning</span></span>
+            
+            <span class="line out skill-row"><span class="key">Programming</span><span class="dots"></span><span class="vals">Python, C++, MATLAB, OpenCV, YOLO, Docker</span></span>
+            
+            <span class="line out skill-row"><span class="key">Fabrication</span><span class="dots"></span><span class="vals">3D Printing, Machining, Wiring, Soldering</span></span>
+            
+
+            <span class="line cmd-line"><span class="prompt">ahmed@portfolio:~$</span> <span class="cmd">status --availability</span></span>
+            
+            <span class="line status-line"><span class="status-dot"></span><span class="status-text">Open to full-time & internship roles — June 2026</span></span>
+            
+
+            <span class="line cmd-line"><span class="prompt">ahmed@portfolio:~$</span> <span class="cursor">&nbsp;</span></span>
+        </div>
+    </div>
+</section>
+
+
+<div class="arrow">
     <a href="#projects">
         More About Me
     <i class="fa-solid fa-angles-down"></i>
@@ -158,54 +214,179 @@
 
     <div class="grid-container">
         
-    <a href="/projects/demo-project/index/" class="project-link">
+        
+    <a href="/projects/material_sample_testing_automation/index/" class="project-link">
         <div class="project-card">
             
             
-            <img src="/_projects/demo-project/project2.jpg" alt="Super Heavy Booster Catch (Demo Only) image">
-            <h3 class="project-title">Super Heavy Booster Catch (Demo Only)</h3>
+            <img src="/_projects/material_sample_testing_automation/arm_above_humboldt.jpg" alt="Material Sample Testing Automation image">
+            <h3 class="project-title">Material Sample Testing Automation</h3>
             <div class="project-skills">
                 
-                    <span class="skill">Structural analysis</span>
+                    <span class="skill">ROS2</span>
                 
-                    <span class="skill">Aerodynamic design</span>
+                    <span class="skill">MoveIt2</span>
                 
-                    <span class="skill">Propulsion system integration</span>
+                    <span class="skill">Python</span>
                 
-                    <span class="skill">Control Algorithem</span>
+                    <span class="skill">OpenCV</span>
                 
-                    <span class="skill">Welding</span>
+                    <span class="skill">Gazebo / Ignition</span>
                 
-                    <span class="skill">Metal forming</span>
+                    <span class="skill">Docker</span>
                 
-                    <span class="skill">Thermal simulation</span>
+                    <span class="skill">Raspberry Pi</span>
+                
+                    <span class="skill">Pick & Place</span>
+                
+                    <span class="skill">ArUco / Pose Estimation</span>
                 
             </div>
-            <p class="project-description">(I have never been employed by / affiliated with SpaceX. This is for demo use only) Developing the Super Heavy booster catch project involves designing a robust launch tower with "chopstick" arms, advanced control systems for precise booster alignment, and integrating sophisticated software for real-time trajectory adjustments and structural engineering to handle immense forces.</p>
+            <p class="project-description">Automated material sample testing in a Civil Engineering research lab at OSU using a Kinova Gen3 robotic arm, ROS2, and computer vision — from simulation to working prototype.</p>
             <button class="read-more">Read more →</button>
         </div>
     </a>
 
-    <a href="/projects/sonos-teardown/sonos/" class="project-link">
+    <a href="/projects/autonomous_rc_aircraft/index/" class="project-link">
         <div class="project-card">
             
             
-            <img src="/_projects/sonos-teardownproject-image.webp" alt="Sonos teardown image">
-            <h3 class="project-title">Sonos teardown</h3>
+            <img src="/_projects/autonomous_rc_aircraft/DBF ahmed frame cropped.jpeg" alt="Autonomous RC Aircraft – DBF Capstone image">
+            <h3 class="project-title">Autonomous RC Aircraft – DBF Capstone</h3>
             <div class="project-skills">
                 
-                    <span class="skill">drumel</span>
+                    <span class="skill">ArduPilot</span>
                 
-                    <span class="skill">microprobing</span>
+                    <span class="skill">Mission Planner</span>
                 
-                    <span class="skill">Electronics Teardown</span>
+                    <span class="skill">Avionics Integration</span>
                 
-                    <span class="skill">PCB analysis</span>
+                    <span class="skill">Soldering</span>
                 
-                    <span class="skill">audio system design</span>
+                    <span class="skill">Wiring & Electrical Assembly</span>
+                
+                    <span class="skill">Autonomous Systems</span>
+                
+                    <span class="skill">Systems Integration</span>
+                
+                    <span class="skill">Flight Testing</span>
                 
             </div>
-            <p class="project-description">Conducted detailed teardown analysis of Sonos Era speaker, documenting internal components, driver configuration, and PCB design. Created technical documentation with photos and assembly insights for engineering reference.</p>
+            <p class="project-description">Led the autonomous systems sub-team for Oregon State's Design Build Fly capstone, achieving the team's first successful autonomous test flight using an ArduPilot-based autopilot.</p>
+            <button class="read-more">Read more →</button>
+        </div>
+    </a>
+
+    <a href="/projects/emotion_display_robot_face/index/" class="project-link">
+        <div class="project-card">
+            
+            
+            <img src="/_projects/emotion_display_robot_face/sami_face.png" alt="Emotion Display Robot Face – SAMI image">
+            <h3 class="project-title">Emotion Display Robot Face – SAMI</h3>
+            <div class="project-skills">
+                
+                    <span class="skill">ROS2</span>
+                
+                    <span class="skill">Python</span>
+                
+                    <span class="skill">Raspberry Pi</span>
+                
+                    <span class="skill">Pygame</span>
+                
+                    <span class="skill">Embedded Systems</span>
+                
+                    <span class="skill">Systems Integration</span>
+                
+            </div>
+            <p class="project-description">Built the animated LCD face and ROS2 emotion-state interface for SAMI, a servo-actuated humanoid robot developed by the BAJAN Robotics team in ROB 421 Applied Robotics at Oregon State University.</p>
+            <button class="read-more">Read more →</button>
+        </div>
+    </a>
+
+    <a href="/projects/automated_door_system/index/" class="project-link">
+        <div class="project-card">
+            
+            
+            <img src="/_projects/automated_door_system/Main.jpg" alt="Automated Security Door System image">
+            <h3 class="project-title">Automated Security Door System</h3>
+            <div class="project-skills">
+                
+                    <span class="skill">Arduino</span>
+                
+                    <span class="skill">C++</span>
+                
+                    <span class="skill">Embedded Systems</span>
+                
+                    <span class="skill">Sensor Integration</span>
+                
+                    <span class="skill">State Machine Design</span>
+                
+                    <span class="skill">3D Printing</span>
+                
+                    <span class="skill">Electronics</span>
+                
+                    <span class="skill">Breadboarding</span>
+                
+            </div>
+            <p class="project-description">A 3D printed miniature automated double-door system with motion detection, a handmade metal detector coil, jam detection, and a full state-machine-driven control system built on Arduino.</p>
+            <button class="read-more">Read more →</button>
+        </div>
+    </a>
+
+    <a href="/projects/little_gym_ferris_wheel_kits/index/" class="project-link">
+        <div class="project-card">
+            
+            
+            <img src="/_projects/little_gym_ferris_wheel_kits/gym_display_wheels_crop.jpg" alt="Popsicle-Stick Ferris Wheel Build Kits image">
+            <h3 class="project-title">Popsicle-Stick Ferris Wheel Build Kits</h3>
+            <div class="project-skills">
+                
+                    <span class="skill">Fusion 360</span>
+                
+                    <span class="skill">Parametric Modeling</span>
+                
+                    <span class="skill">3D Printing</span>
+                
+                    <span class="skill">PrusaSlicer</span>
+                
+                    <span class="skill">Design for Manufacturing</span>
+                
+                    <span class="skill">Trigonometry / Geometric Design</span>
+                
+                    <span class="skill">Batch Production</span>
+                
+            </div>
+            <p class="project-description">Designed and 3D printed a 35-kit batch of snap-together joints that let kids build their own working popsicle-stick Ferris wheel, commissioned by a local child development center.</p>
+            <button class="read-more">Read more →</button>
+        </div>
+    </a>
+
+    <a href="/projects/ph_dosing_controller/index/" class="project-link">
+        <div class="project-card">
+            
+            
+            <img src="/_projects/ph_dosing_controller/rig_hero.jpg" alt="pH Dosing Controller image">
+            <h3 class="project-title">pH Dosing Controller</h3>
+            <div class="project-skills">
+                
+                    <span class="skill">Raspberry Pi</span>
+                
+                    <span class="skill">Python</span>
+                
+                    <span class="skill">Flask</span>
+                
+                    <span class="skill">REST APIs</span>
+                
+                    <span class="skill">I2C / Hardware Drivers</span>
+                
+                    <span class="skill">Control Systems</span>
+                
+                    <span class="skill">Atlas Scientific EZO Sensors</span>
+                
+                    <span class="skill">Tailscale VPN / Remote Access</span>
+                
+            </div>
+            <p class="project-description">Built an automated pH monitoring and dosing system using a Raspberry Pi 4, Atlas Scientific EZO-pH sensor, and dual EZO-PMP peristaltic pumps to hold a liquid at a target pH setpoint.</p>
             <button class="read-more">Read more →</button>
         </div>
     </a>
@@ -222,7 +403,7 @@
         
           <li>
             <div class="skills-card">
-              <span class="category-label">3D Modeling</span>
+              <span class="category-label">CAD Software</span>
             
               <ul class="skills-list">
                 
@@ -231,19 +412,11 @@
                   </li>
                 
                   <li class="skill">
-                    Solidworks
-                  </li>
-                
-                  <li class="skill">
-                    Creo
+                    SolidWorks
                   </li>
                 
                   <li class="skill">
                     Fusion 360 (Autodesk)
-                  </li>
-                
-                  <li class="skill">
-                    Blender (for complex shapes or animations)
                   </li>
                 
                   <li class="skill">
@@ -254,8 +427,51 @@
                     Inventor (Autodesk)
                   </li>
                 
+                </ul>
+            </div>
+            
+          </li> 
+        
+          <li>
+            <div class="skills-card">
+              <span class="category-label">Programming</span>
+            
+              <ul class="skills-list">
+                
                   <li class="skill">
-                    CATIA (Dassault Systèmes)
+                    Python
+                  </li>
+                
+                  <li class="skill">
+                    C++
+                  </li>
+                
+                  <li class="skill">
+                    MATLAB
+                  </li>
+                
+                  <li class="skill">
+                    Arduino
+                  </li>
+                
+                  <li class="skill">
+                    ROS2
+                  </li>
+                
+                  <li class="skill">
+                    MoveIt2
+                  </li>
+                
+                  <li class="skill">
+                    OpenCV
+                  </li>
+                
+                  <li class="skill">
+                    Simulink
+                  </li>
+                
+                  <li class="skill">
+                    GitHub
                   </li>
                 
                 </ul>
@@ -265,12 +481,12 @@
         
           <li>
             <div class="skills-card">
-              <span class="category-label">Prototyping</span>
+              <span class="category-label">Hardware & Fabrication</span>
             
               <ul class="skills-list">
                 
                   <li class="skill">
-                    SLA
+                    3D Printing
                   </li>
                 
                   <li class="skill">
@@ -278,19 +494,7 @@
                   </li>
                 
                   <li class="skill">
-                    FDM
-                  </li>
-                
-                  <li class="skill">
-                    SLS
-                  </li>
-                
-                  <li class="skill">
-                    DMLS
-                  </li>
-                
-                  <li class="skill">
-                    PolyJet Printing
+                    Laser Cutting
                   </li>
                 
                   <li class="skill">
@@ -298,19 +502,23 @@
                   </li>
                 
                   <li class="skill">
-                    Laser Cutting
+                    Soldering
                   </li>
                 
                   <li class="skill">
-                    Water Jet Cutting
+                    Wiring & Avionics Assembly
                   </li>
                 
                   <li class="skill">
-                    Arduino / Raspberry Pi
+                    Electronics
                   </li>
                 
                   <li class="skill">
-                    Breadboarding for circuit testing
+                    Machine Shop
+                  </li>
+                
+                  <li class="skill">
+                    Breadboarding
                   </li>
                 
                 </ul>
@@ -320,7 +528,61 @@
         
           <li>
             <div class="skills-card">
-              <span class="category-label">Design Standards / Practices</span>
+              <span class="category-label">Software Tools</span>
+            
+              <ul class="skills-list">
+                
+                  <li class="skill">
+                    Docker
+                  </li>
+                
+                  <li class="skill">
+                    Mission Planner
+                  </li>
+                
+                  <li class="skill">
+                    ArduPilot
+                  </li>
+                
+                  <li class="skill">
+                    PrusaSlicer
+                  </li>
+                
+                  <li class="skill">
+                    Microsoft Office Suite
+                  </li>
+                
+                  <li class="skill">
+                    Google Suite
+                  </li>
+                
+                </ul>
+            </div>
+            
+          </li> 
+        
+          <li>
+            <div class="skills-card">
+              <span class="category-label">Platforms</span>
+            
+              <ul class="skills-list">
+                
+                  <li class="skill">
+                    Linux
+                  </li>
+                
+                  <li class="skill">
+                    Raspberry Pi OS
+                  </li>
+                
+                </ul>
+            </div>
+            
+          </li> 
+        
+          <li>
+            <div class="skills-card">
+              <span class="category-label">Design Standards</span>
             
               <ul class="skills-list">
                 
@@ -332,8 +594,23 @@
                     ISO fits and tolerances
                   </li>
                 
+                </ul>
+            </div>
+            
+          </li> 
+        
+          <li>
+            <div class="skills-card">
+              <span class="category-label">AI & Automation</span>
+            
+              <ul class="skills-list">
+                
                   <li class="skill">
-                    PLM (PTC Windchill / Arena)
+                    AI-assisted Development
+                  </li>
+                
+                  <li class="skill">
+                    Machine Learning
                   </li>
                 
                 </ul>
@@ -343,51 +620,16 @@
         
           <li>
             <div class="skills-card">
-              <span class="category-label">PCB Design</span>
+              <span class="category-label">Production Engineering</span>
             
               <ul class="skills-list">
                 
                   <li class="skill">
-                    Altium Designer
+                    Design for Manufacturing (DFM/DFA)
                   </li>
                 
                   <li class="skill">
-                    Altium
-                  </li>
-                
-                  <li class="skill">
-                    Eagle
-                  </li>
-                
-                  <li class="skill">
-                    KiCad
-                  </li>
-                
-                </ul>
-            </div>
-            
-          </li> 
-        
-          <li>
-            <div class="skills-card">
-              <span class="category-label">Problem Solving / Risk Management</span>
-            
-              <ul class="skills-list">
-                
-                  <li class="skill">
-                    Root Cause Analysis (e.g., 5 Whys, Fishbone Diagram)
-                  </li>
-                
-                  <li class="skill">
-                    DFMEA / PFMEA
-                  </li>
-                
-                  <li class="skill">
-                    Six Sigma methodologies
-                  </li>
-                
-                  <li class="skill">
-                    Shain Red-X
+                    Quality Control / GD&T Application
                   </li>
                 
                 </ul>
@@ -432,14 +674,15 @@
             <a href="/projects/">
                 <span>Projects</span>
             </a>
-            <a href=https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing target="_blank" rel="noopener noreferrer">
+            <a href="/resume">
                 <span>Resume</span>
             </a>
         </div>
     </div>
     <div class="license">
-        <span>For any question or suggestion for the portfolio template or projects, reach out <a class="help" href="https://createdotshow.com"> Here</a> </span>
-        <p>FreeToEngineer portfolio template © 2025 by Aram Lee is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">CC BY 4.0</a></p>
+        <span>For any question or suggestion for the portfolio template or projects, reach out <a class="help" href="mailto:admin@lowinertia.com"> Here</a> </span>
+        <p>Free-To-Engineer portfolio template © 2025 by lowinertia.com is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">CC BY 4.0</a></p>
     </div>
 </footer>
+
 </html>
